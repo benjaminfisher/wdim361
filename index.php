@@ -11,6 +11,11 @@
 	
 	<p>This is pure HTML</p>
 	
-	<?php print 'This is more php'; ?>
+	<?php
+        print '<p>This is more php</p>'; 
+        $name = "Sir Issac Newton";
+        
+        print 'Hello There ' .$name;
+    ?>
 </body>
 </html>
