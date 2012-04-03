@@ -15,7 +15,9 @@
         print '<p>This is more php</p>'; 
         $name = "Sir Issac Newton";
         
-        print 'Hello There ' .$name;
+        print "<p>Hello there $name </p>"; // Exploding variables !!!
+		
+		
     ?>
 </body>
 </html>
