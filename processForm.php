@@ -27,7 +27,7 @@
 	<p><?php echo date('l F j, Y g:h a'); ?></p>
 	
 	<p>
-	<?php if (strlen($phone) < 10){ 
+	<?php if ($phone && strlen($phone) < 10){ 
 		echo "Phone number entered is invalid. It must be at least 10 digits.";
 	} else {
 		echo "First: $fName, Last: $lName, Email: $email, Phone: $phone";

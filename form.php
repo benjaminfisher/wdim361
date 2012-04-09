@@ -37,13 +37,13 @@
 			</fieldset>
 			<fieldset>
 				<legend>Website Use</legend>
-				<label>How often do you access the website?: <input type="number" name="useFrequency"/></label>
+				<label>How often do you access the website? <input type="number" name="useFrequency"/></label>
 				<select name="usePeriod">
 					<option value="weekly">weekly</option>
 					<option value="monthly">monthly</option>
 				</select><br />
-				<label>What part of the site do you access most often?: <input type="text" name="primaryAccess"/></label><br />
-				<label>What other part of the site do you access frequently?: <input name="secondaryAccess" type="text" /></label><br />
+				<label>What part of the site do you access most often? <input type="text" name="primaryAccess"/></label><br />
+				<label>What other part of the site do you access frequently? <input name="secondaryAccess" type="text" /></label><br />
 				<label>What is the site missing?</br>
 					<input type="textarea" name="siteComments"/>
 				</label>
@@ -51,7 +51,7 @@
 			
 			<fieldset>
 				<legend>Contact Information:</legend>
-				<label>May we contact you for user testing:
+				<label>May we contact you for user testing?
 					<input type="checkbox" name="contact" />Yes
 				</label><br />
 				<p>If so please fill out the following information:</p>
