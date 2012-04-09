@@ -1,0 +1,5 @@
+Scoops: 1 	 Flavor: Human Skull 	 Container: cone
+Scoops: 1 	 Flavor: Human Skull 	 Container: cone
+Scoops: 4 	 Flavor: Pork!!! 	 Container: cone
+Scoops: 3 	 Flavor: Brain Meats 	 Container: dish
+Scoops: 4	 Flavor: Banana	 Container: cone
