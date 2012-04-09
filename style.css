@@ -1,0 +1,111 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End Reset styles */
+
+body{
+	background: lightblue;
+	font-size:14px;
+}
+
+h1{ font-size:2em; margin:15px;}
+
+fieldset{
+	background: ghostwhite;
+	border: 1px outset #666;
+	float:left;
+	margin:15px;
+	padding:15px;
+	min-height: 220px;
+	min-width: 300px;
+	width: 45%;
+	
+	
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    
+    -webkit-box-shadow:  3px 3px 10px 3px #7AB1E8;
+    -moz-box-shadow:  3px 3px 10px 3px #7AB1E8;
+    box-shadow:  3px 3px 10px 3px #7AB1E8;
+        
+}
+
+fieldset legend {
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(248,249,254,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(248,249,254,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(248,249,254,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(248,249,254,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(248,249,254,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(248,249,254,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f8f9fe',GradientType=0 ); /* IE6-9 */
+
+	
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+        
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    
+    bottom: 12px;
+    padding: 5px 15px;
+    position:relative;
+}
+
+form fieldset label{ margin-bottom: 0.25em; display: block; }
+
+form button{
+	clear:both;
+	margin-left:15px;
+}
