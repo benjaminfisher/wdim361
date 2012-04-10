@@ -24,7 +24,7 @@
 	}
 	echo "</ul>\n";
 	
-	sort($pets);
+	sort($pets); // ascending sort [alphabetic or numerical] of an array. sortr() is descending
 	
 	echo "<ul>\n";
 	foreach ($pets as $pet) {
@@ -32,7 +32,7 @@
 	}
 	echo "</ul>\n";
 	
-	shuffle($pets);
+	shuffle($pets); // Randomize an array
 	
 	echo "<ul>\n";
 	foreach ($pets as $pet) {
@@ -40,16 +40,18 @@
 	}
 	echo "</ul>\n";
 	
-	$pets[] = "Oreo";
+	$pets[] = "Oreo"; // Append a value to an array
 	
+	// foreach usage
 	echo "<ul>\n";
 	foreach ($pets as $pet) {
 		print "\t<li>$pet</li>\n";
 	}
 	echo "</ul>\n";
 	
+	// Basic array format
 	$movies = array(
-		'Hunger Games' => 'Katniss',
+		'Hunger Games' => 'Katniss Everdeen',
 		'21 Jump Street' => 'Jonah Hill',
 		'Wrath of the Titans' => 'Some warrior dude',
 		'Project X' => 'Every teen in America',
@@ -66,9 +68,20 @@
 	
 	$two_dim = array($pets, $movies); // Two dimensional arrays are arrays inside of arrays
 	
+	// print $_SERVER['DOCUMENT_ROOT'];
 	
+	function sayHello($name){
+		print "Hello $name<br />";
+	}
+	
+	sayHello('Steve Bushemi');
 ?>
-
+	
+	<ul>
+	<?php foreach ($movies as $movie => $actor) : // Alternate colon syntax for the foreach statement ?>
+		<li>The movie <?php print "$movie starred $actor"; ?> </li>
+	<?php endforeach; ?>
+	</ul>
 	</div>
 </body>
 </html>
