@@ -28,13 +28,23 @@
 <body>
 	<p><strong>Survey Submitted:</strong> <?php echo date('l F j, Y g:h a'); ?></p>
 	
-	<p>
-	<?php if ($contact == "on" && strlen($cPhone) < 10){ 
-		echo "Phone number entered is invalid. It must be at least 10 digits.";
-	} else if (){
-		
-	}
+	<?php
+		if($contact == "on"):
+			if(strlen($cName) == 0 || strlen($cEmail) == 0): ?>
+				<p>Please fill in all contact information if you wish to be contacted for user testing.</p>
+			<?php elseif (strlen($cPhone) < 10): ?>
+				<p>Please enter your full phone number.</p>
+			<?php endif;
+		else:
+			$cName = "Anonymous";
+		endif;
 	?>
-	</p>
+	
+	<p>Thanx for so much information <?php echo strtoupper($cName); ?>. We will promptly sell it to the highest bidder.</p>
+	
+	<?php if(strlen($cEmail) > 0): ?>
+		<p>So your email address was <?php echo strtolower($cEmail); ?> again?</p>
+	<?php endif; ?>
+	
 </body>
 </html>
