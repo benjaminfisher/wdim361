@@ -5,7 +5,9 @@
 	<title></title>
 </head>
 <body>
-	<?php 
+	
+	<?php
+		include '_nav.php';
 		echo "</br> This is an echo.";
 	?>
 	

@@ -1,19 +1,21 @@
 <?php
-	@$role = $_POST['userRole'];
-	@$program = $_POST['program'];
-	@$pYear = $_POST['programYear'];
-	@$housingType = $_POST['housing'];
-	@$travelType = $_POST['travelType'];
-	@$cDistance = $_POST['commuteDistance'];
-	@$useFrequency = $_POST['useFrequency'];
-	@$usePeriod = $_POST['usePeriod'];
-	@$pAccess = $_POST['primaryAccess'];
-	@$sAccess = $_POST['secondaryAccess'];
-	@$siteComments = $_POST['siteComments'];
-	@$contact = $_POST['contact'] || FALSE; // Boolean for user testing contact
-	@$cName = $_POST['contactName'];
-	@$cPhone = $_POST['contactPhoneNumber']; 
-	@$cEmail = $_POST['contactEmailAddress'];
+	if (!empty($_POST)) {
+		$role = $_POST['userRole'];
+		$program = $_POST['program'];
+		$pYear = $_POST['programYear'];
+		$housingType = $_POST['housing'];
+		$travelType = empty($_POST['travelType']) ? "N/A" : $_POST['travelType'];
+		$cDistance = $_POST['commuteDistance'];
+		$useFrequency = $_POST['useFrequency'];
+		$usePeriod = $_POST['usePeriod'];
+		$pAccess = $_POST['primaryAccess'];
+		$sAccess = $_POST['secondaryAccess'];
+		$siteComments = $_POST['siteComments'];
+		$contact = !empty($_POST['contact']) ? TRUE : FALSE;
+		$cName = empty($_POST['contactName'])? "anonymous" : $_POST('contactName');
+		$cPhone = $_POST['contactPhoneNumber']; 
+		$cEmail = $_POST['contactEmailAddress'];
+	};
 	
 	date_default_timezone_set('America/Los_Angeles');
 ?>

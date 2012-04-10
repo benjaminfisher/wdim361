@@ -1,0 +1,25 @@
+body {
+	font-family:verdana;
+	color:#333; 
+	text-align:center;
+	font-size:11px;
+	line-height:18px;
+}
+.wrapper {
+	width:700px;
+	text-align:left; 
+	margin-right:auto;
+	margin-left:auto;
+	padding:20px;
+	border:1px solid #333;
+}
+h1 {
+	font-size:20px;
+}
+h2 {
+	font-size:16px;
+}
+h1, h2 {
+	font-family:"MS Trebuchet", Arial, sans-serif;
+	color:#999;
+}
