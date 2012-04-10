@@ -16,8 +16,6 @@
 	@$cEmail = $_POST['contactEmailAddress'];
 	
 	date_default_timezone_set('America/Los_Angeles');
-	
-	var_dump($_REQUEST);
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
