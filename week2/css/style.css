@@ -1,0 +1,43 @@
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+
+*{ position: relative; }
+
+body {
+	padding-bottom:50px;
+}
+
+header, footer{
+	background:aliceblue;
+	border: 1px solid skyblue;
+	margin:0 auto;
+	padding:1em 2em;
+	width:960px;
+}
+
+footer{
+	bottom:0px;
+	clear:both;
+	position:relative;
+}
+
+div.wrapper{
+	background:ghostwhite;
+	margin:0 auto;
+	overflow:auto;
+	padding:2em 2em;
+	width:960px;
+}
+
+div.wrapper h2{
+	font-size:2em;
+	margin-bottom:0.5em;
+	text-align:center;
+	width: 100%;
+}
+
+div.wrapper figure{ float:left; margin-right:1em; }
+div.wrapper figure img { margin-bottom:0.5em; }
+div.wrapper p { margin-bottom: 0.5em; }
+div.wrapper p cite { font-style:italic; }
+
+footer p.copy{ float: right; }
