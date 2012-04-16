@@ -5,8 +5,6 @@ include 'functions.php';
 
 <?php
 
-var_dump($_SERVER);
-
 if (!empty($_POST['input1']) || !empty($_POST['input2'])) {
 	$num1 = $_POST['input1'];
 	$num2 = $_POST['input2'];
