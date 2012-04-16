@@ -19,7 +19,7 @@ if (!empty($_POST['input1']) || !empty($_POST['input2'])) {
 
 <form action="" method="post">
 	<p>Enter two numbers and an operation:</p>
-	<input type="number" name="input1" placeholder="First input"/>
+	<input type="number" step="0.01" name="input1" placeholder="First input"/>
 	<label>Operation:
 		<select name="operation">
 			<option value="1">Addition</option>
@@ -28,7 +28,7 @@ if (!empty($_POST['input1']) || !empty($_POST['input2'])) {
 			<option value="4">Division</option>
 		</select>
 	</label>
-	<input type="number" name="input2" placeholder="Second input"/>
+	<input type="number" step="0.01" name="input2" placeholder="Second input"/>
 	<button type="submit">Submit human</button>
 </form>
 
@@ -39,6 +39,8 @@ if (!empty($_POST['input1']) || !empty($_POST['input2'])) {
 	</p>
 	
 	<p>You should thank <?php echo span_wrap($_SERVER['SERVER_NAME'], 'green'); ?> for doing your homework.</p>
+	
+	<p>After all it only took us <?php echo span_wrap(time() - $_SERVER['REQUEST_TIME'], 'green')?> seconds to do it.</p>
 
 <?php endif; ?>
 
