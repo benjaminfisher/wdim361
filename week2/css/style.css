@@ -2,6 +2,8 @@
 
 *{ position: relative; }
 
+ol{ list-style-type: decimal; list-style-position:inside; }
+
 body {
 	padding-bottom:50px;
 }
@@ -14,14 +16,33 @@ header, footer{
 	width:960px;
 }
 
+header { overflow:auto; }
+
 footer{
 	bottom:0px;
 	clear:both;
 	position:relative;
 }
 
+header h1{
+	font-size:2em;
+	float:left;
+}
+
+header h1 img { border: 1px solid skyblue; margin-right: 1em; }
+
+header nav {
+	position:absolute;
+	right: 1em;
+	bottom: 1em;
+}
+
+header nav ul li { float:left; padding-left: 1em; }
+
 div.wrapper{
 	background:ghostwhite;
+	border-right: 1px solid #AAA;
+	border-left: 1px solid #AAA;
 	margin:0 auto;
 	overflow:auto;
 	padding:2em 2em;
@@ -40,4 +61,18 @@ div.wrapper figure img { margin-bottom:0.5em; }
 div.wrapper p { margin-bottom: 0.5em; }
 div.wrapper p cite { font-style:italic; }
 
+div.wrapper form {
+	border: 1px solid #AAA;
+	margin: 1em;
+	padding: 1em;
+	
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    
+}
+div.wrapper form button { display: block; }
+
 footer p.copy{ float: right; }
+
+.green { color: #0A0; }

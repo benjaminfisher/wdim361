@@ -59,4 +59,4 @@
 
 <a href="animals.php">Pick another</a>
 
-<?php include '_footer.php'; ?>
+<?php include '_footer.html'; ?>

@@ -1,6 +1,4 @@
-<?php
-include '_header.php';
-?>
+<?php include '_header.php'; ?>
 
 <form action="animal_result.php" method="post">
 	<label>Pick a furry friend:
@@ -15,4 +13,4 @@ include '_header.php';
 	<button type="submit">Submit Human!</button>
 </form>
 
-<?php include '_footer.php' ?>
+<?php include '_footer.html'; ?>
