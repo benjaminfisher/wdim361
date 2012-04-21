@@ -108,11 +108,9 @@ if(!empty($_POST['senderEmail']) && !empty($_POST['senderMessage'])){
 	<label>Email: <input type="" name="senderEmail" required placeholder="Your email address..."/></label>
 	<label>Subject:
 		<select name="subject">
-			<option value="0"><?php echo $subjects[0]; ?></option>
-			<option value="1"><?php echo $subjects[1]; ?></option>
-			<option value="2"><?php echo $subjects[2]; ?></option>
-			<option value="3"><?php echo $subjects[3]; ?></option>
-			<option value="4"><?php echo $subjects[4]; ?></option>
+<?php for ($i=0; $i < count($subjects); $i++): ?>
+			<option value="<?php echo $i; ?>"><?php echo $subjects[$i]; ?></option>
+<?php endfor; ?>
 		</select>
 	</label>
 	<label>Message: <textarea name="senderMessage" cols="30" rows="10">Enter your message here...</textarea></label>
