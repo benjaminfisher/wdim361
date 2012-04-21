@@ -52,7 +52,7 @@ if(!empty($_POST['senderEmail']) && !empty($_POST['senderMessage'])){
 	if (!$subjectVal['test']) {
 		$errors[] = $subjectVal['msg'];
 	} else {
-		$subject = $subjects[$_POST['subject']];
+		$subject = "Website Comment: ".$subjects[$_POST['subject']];
 	}
 		
 	if(empty($errors)){
