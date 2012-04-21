@@ -38,7 +38,7 @@ function message_validator($message){
 		$result['msg'] = "TL:DR";
 	}elseif(stripos($message, "scary") > 0){
 		$result['test'] = FALSE;
-		$result['msg'] = "Sorry, your message is just to frightening for the mail server to handle.";
+		$result['msg'] = "Sorry, your message is just too frightening for the mail server to handle.";
 	} else{
 		$result['test'] = TRUE;
 		$result['msg'] = $message;
