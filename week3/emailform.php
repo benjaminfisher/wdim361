@@ -10,7 +10,7 @@ function subject_validator($subject){
 	$error = array();
 	switch ($subject) {
 		case 2:
-			$error['msg'] = "Since your just a big meanie, I'm not going to send this message.";
+			$error['msg'] = "Since you're just a big meanie, I'm not going to send this message.";
 			$error['test'] = FALSE;
 			return $error;
 			break;
@@ -29,6 +29,24 @@ function subject_validator($subject){
 	};
 }
 
+function message_validator($message){
+	$message = trim(strip_tags($message));
+	$result = array();
+	
+	if(strlen($message) > 60){
+		$result['test'] = FALSE;
+		$result['msg'] = "TL:DR";
+	}elseif(stripos($message, "scary") > 0){
+		$result['test'] = FALSE;
+		$result['msg'] = "Sorry, your message is just to frightening for the mail server to handle.";
+	} else{
+		$result['test'] = TRUE;
+		$result['msg'] = $message;
+	}
+	
+	return $result;
+};
+
 
 if(!empty($_POST['senderEmail']) && !empty($_POST['senderMessage'])){
 	$from = 'noreply@benjaminjfisher.com';
@@ -45,26 +63,31 @@ if(!empty($_POST['senderEmail']) && !empty($_POST['senderMessage'])){
 	
 	if(!isEmail($_POST['senderEmail'])){
 		$errors[] = 'That is not a valid email address';
-	}
+	};
 	
 	$subjectVal = subject_validator($_POST['subject']);
+	$msgVal = message_validator($_POST['senderMessage']);
 	
 	if (!$subjectVal['test']) {
 		$errors[] = $subjectVal['msg'];
 	} else {
 		$subject = "Website Comment: ".$subjects[$_POST['subject']];
 	}
-		
+	
+	if (!$msgVal['test']) {
+		$errors[] = $msgVal['msg'];
+	}
+
 	if(empty($errors)){
 		$message .= 'Email = '.$_POST['senderEmail'] .'<br /><br />';
-		$message .= 'Message = '.$_POST['senderMessage'] .'<br />';
+		$message .= 'Message = '.$msgVal['msg'] .'<br />';
 
 		if(mail($to, $subject, $message, $headers)){
 			$msg = 'The email has been sent.';
 		} else {
 			$errors[] = 'Sorry, unable to send the message.';
 		}
-	};
+	}
 	
 	if(!empty($msg)){
 		print '<div class="msg">'.$msg .'</div>';
