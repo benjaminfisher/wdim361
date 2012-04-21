@@ -1,8 +1,33 @@
 <?php
 
-$title = 'Week 3 | Inclass';
+$title = 'Week 3 | Homework';
 include '_header.php';
 include 'miscfunctions.php';
+
+$subjects = array('General question', 'Give me praise', 'Mean-spirited comment', 'Political comment', 'Meaning of Life');
+
+function subject_validator($subject){
+	$error = array();
+	switch ($subject) {
+		case 2:
+			$error['msg'] = "Since your just a big meanie, I'm not going to send this message.";
+			$error['test'] = FALSE;
+			return $error;
+			break;
+			
+		case 3:
+			$error['msg'] = "When I want your political opinion, I'll ask for it.";
+			$error['test'] = FALSE;
+			return $error;
+			break;
+		
+		default:
+			$error['msg'] = '';
+			$error['test'] = TRUE;
+			return $error;
+			break;
+	};
+}
 
 
 if(!empty($_POST['senderEmail']) && !empty($_POST['senderMessage'])){
@@ -10,7 +35,6 @@ if(!empty($_POST['senderEmail']) && !empty($_POST['senderMessage'])){
 	$to = 'neohell@hotmail.com';
 	
 	$headers = "From: <".$from.">\nMime-Version: 1.0\nContent-type:text/html; charset:utf-8";
-	$subject = 'Email from the website';
 	
 	$message = '<p>Someone has sent you a message</p>';
 	if(!empty($_POST['senderName'])){
@@ -23,6 +47,14 @@ if(!empty($_POST['senderEmail']) && !empty($_POST['senderMessage'])){
 		$errors[] = 'That is not a valid email address';
 	}
 	
+	$subjectVal = subject_validator($_POST['subject']);
+	
+	if (!$subjectVal['test']) {
+		$errors[] = $subjectVal['msg'];
+	} else {
+		$subject = $subjects[$_POST['subject']];
+	}
+		
 	if(empty($errors)){
 		$message .= 'Email = '.$_POST['senderEmail'] .'<br /><br />';
 		$message .= 'Message = '.$_POST['senderMessage'] .'<br />';
@@ -51,6 +83,15 @@ if(!empty($_POST['senderEmail']) && !empty($_POST['senderMessage'])){
 <form action="" method="post">
 	<label>Name: <input type="" name="senderName" required placeholder="Your name..."/></label>
 	<label>Email: <input type="" name="senderEmail" required placeholder="Your email address..."/></label>
+	<label>Subject:
+		<select name="subject">
+			<option value="0"><?php echo $subjects[0]; ?></option>
+			<option value="1"><?php echo $subjects[1]; ?></option>
+			<option value="2"><?php echo $subjects[2]; ?></option>
+			<option value="3"><?php echo $subjects[3]; ?></option>
+			<option value="4"><?php echo $subjects[4]; ?></option>
+		</select>
+	</label>
 	<label>Message: <textarea name="senderMessage" cols="30" rows="10">Enter your message here...</textarea></label>
 	
 	<button type="submit">Send</button><button type="reset">Clear</button>

@@ -1,4 +1,5 @@
 body {
+	background: transparent url(black_linen_v2.png) 0 0 repeat;
 	font-family:verdana;
 	color:#333; 
 	text-align:center;
@@ -6,6 +7,7 @@ body {
 	line-height:18px;
 }
 .wrapper {
+	background-color: #f1f2f2;
 	overflow:auto;
 	width:700px;
 	text-align:left; 
@@ -13,6 +15,17 @@ body {
 	margin-left:auto;
 	padding:20px;
 	border:1px solid #333;
+	
+	
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    
+    -webkit-box-shadow:  1px 1px 5px 3px rgba(3, 3, 3, 0.5);
+    -moz-box-shadow:  1px 1px 5px 3px rgba(3, 3, 3, 0.5);
+    box-shadow:  1px 1px 5px 3px rgba(3, 3, 3, 0.5);
+    
+        
 }
 h1 {
 	font-size:20px;

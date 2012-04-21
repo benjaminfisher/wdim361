@@ -13,6 +13,16 @@ body {
 	margin-left:auto;
 	padding:20px;
 	border:1px solid #333;
+	
+	
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    
+    -webkit-box-shadow:  1px 1px 5px 3px #AAA;
+    -moz-box-shadow:  1px 1px 5px 3px #AAA;
+    box-shadow:  1px 1px 5px 3px #AAA;
+        
 }
 h1 {
 	font-size:20px;
