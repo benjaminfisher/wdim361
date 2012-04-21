@@ -7,24 +7,24 @@ include 'miscfunctions.php';
 $subjects = array('General question', 'Give me praise', 'Mean-spirited comment', 'Political comment', 'Meaning of Life');
 
 function subject_validator($subject){
-	$error = array();
+	$result = array();
 	switch ($subject) {
 		case 2:
-			$error['msg'] = "Since you're just a big meanie, I'm not going to send this message.";
-			$error['test'] = FALSE;
-			return $error;
+			$result['msg'] = "Since you're just a big meanie, I'm not going to send this message.";
+			$result['test'] = FALSE;
+			return $result;
 			break;
 			
 		case 3:
-			$error['msg'] = "When I want your political opinion, I'll ask for it.";
-			$error['test'] = FALSE;
-			return $error;
+			$result['msg'] = "When I want your political opinion, I'll ask for it.";
+			$result['test'] = FALSE;
+			return $result;
 			break;
 		
 		default:
-			$error['msg'] = '';
-			$error['test'] = TRUE;
-			return $error;
+			$result['msg'] = '';
+			$result['test'] = TRUE;
+			return $result;
 			break;
 	};
 }
