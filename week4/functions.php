@@ -5,8 +5,8 @@ function page_name($path){
 };
 
 // Return $content wrapped in a specified HTML $tag with optional $class
-function tag_wrap($content, $tag, $class = NULL){
-	$result = "\n<$tag";
+function tag_wrap($tag, $content, $class = NULL){
+	$result = "<$tag";
 	$result .= (!empty($class)) ? ' class="'.$class.'">' : '>' ;
 	$result .= "$content</$tag>\n";
 	
