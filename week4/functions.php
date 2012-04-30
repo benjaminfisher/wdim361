@@ -24,11 +24,11 @@ function page_name($path){
 
 // Return $content wrapped in a specified HTML $tag with optional $class
 function tag_wrap($tag, $content = "", $class = NULL){
-	$result = (is_block($tag)) ? "\n<" : "<" ;
+	$result = (is_block($tag)) ? "\r<" : "<" ;
 	$result .= $tag;
 	$result .= (!empty($class)) ? ' class="'.$class.'">' : '>' ;
 	$result .= $content;
-	$result .= (is_block($tag)) ? "\n</$tag>\n" : "</$tag>" ;
+	$result .= (is_block($tag)) ? "\r</$tag>\n" : "</$tag>" ;
 	
 	return $result;
 };

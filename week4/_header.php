@@ -1,4 +1,5 @@
 <?php
+	// Doctype defaults to HTML5
 	if(!empty($doctype)){
 		echo $doctype."\n";
 	} else {
@@ -19,5 +20,9 @@
 	?>
 </head>
 <body>
+	<header>
+		<h1>Page Name</h1>
+		<?php if(!empty($nav)){ echo $nav; }?>
+	</header>
 	<div class="wrapper">
 		
