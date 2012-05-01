@@ -14,11 +14,11 @@ class Page{
 	);
 	
 	function __construct(){
-		
+
 	}
 	
 	public function __get($name){
-		return $this -> $name;
+		return $this -> name;
 	}
 	
 	public function __set($name, $value){
@@ -36,8 +36,8 @@ class Page{
 		$nav = tag_wrap('ul', $nav);
 		$nav = tag_wrap($tag, $nav, 'global');
 		
-		$this->style .= "header nav{\r\t";
-		$this->style .= "overflow:auto;\r";
+		$this->style .= "header $tag.global{\r\t";
+		$this->style .= "overflow:auto;";
 		
 		if($orientation === "left"){
 			 $this->style .= "float: left;";
@@ -46,12 +46,12 @@ class Page{
 		}
 		
 		$this->style .= "\r\tborder: 1px solid black;";
-		$this->style .= "\r\tmargin: 0 1em;\r";
+		$this->style .= "\r\tmargin: 0 1em;";
 		$this->style .= "\r\tpadding: 1em;\r";
 		$this->style .= "}\n";
 		
 		if ($orientation === "top") {
-			$this->style .= "\nheader nav li{";
+			$this->style .= "\nheader $tag.global li{";
 			$this->style .= "\r\tfloat:left;";
 			$this->style .= "\r\tlist-style-type:none;";
 			$this->style .= "\r\tmargin-right:1em;";

@@ -1,0 +1,38 @@
+body {
+	background: url(assets/black_linen_v2.png) 0 0 repeat #333;
+	font-family:verdana;
+	color:#333;
+	text-align:center;
+	font-size:11px;
+	line-height:18px;
+}
+.wrapper {
+	background-color:ghostwhite;
+	overflow:auto;
+	width:700px;
+	text-align:left; 
+	margin-right:auto;
+	margin-left:auto;
+	padding:20px;
+	border:1px solid #333;
+	
+	
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    
+    -webkit-box-shadow:  1px 1px 5px 3px #AAA;
+    -moz-box-shadow:  1px 1px 5px 3px #AAA;
+    box-shadow:  1px 1px 5px 3px #AAA;
+        
+}
+h1 {
+	font-size:20px;
+}
+h2 {
+	font-size:16px;
+}
+h1, h2 {
+	font-family:"MS Trebuchet", Arial, sans-serif;
+	color:#999;
+}

@@ -21,7 +21,7 @@
 </head>
 <body>
 	<header>
-		<h1>Page Name</h1>
+		<h1><?php (!empty($page_name)) ? print $page_name : print "Page Name" ; ?></h1>
 		<?php if(!empty($nav)){ echo $nav; }?>
 	</header>
 	<div class="wrapper">
