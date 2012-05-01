@@ -9,7 +9,8 @@ define('PHONE', '555-869-5267');
 $sql = 'SELECT * FROM categories';
 $result = $mysqli->query($sql);
 
-
+$sql2 = 'SELECT * FROM products';
+$result2 = $mysqli->query($sql2);
 ?>
 
 
@@ -29,12 +30,32 @@ $result = $mysqli->query($sql);
     <select name="category">
         <?php 
             while ($row = $result -> fetch_array()) {
-                echo '<option valude="'.$row['id'].'">'.$row['category'].'</option>';
+                echo '<option value="'.$row['id'].'">'.$row['category'].'</option>';
             }
         ?>
     </select>
 </form>
 
+    <table>
+        <th>
+            <td>Image</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Inventory</td>
+        </th>
+        
+        <?php while($row = $result2 -> fetch_object()): ?>
+    
+    	<tr>
+    	    <td><img width="50px" src="images/<?php echo $row->image; ?>" /></td>
+    	    <td><?php echo $row->name; ?></td>
+    	    <td><?php echo $row->price; ?></td>
+    	    <td><?php echo $row->inventory; ?></td>    	    
+    	</tr>
+    	
+        <?php endwhile ?>
+        
+    </table>
 
 <?php // Return results for MySQL query *see above*
 
