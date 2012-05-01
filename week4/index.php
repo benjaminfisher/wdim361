@@ -16,9 +16,9 @@ include '_header.php';
 		</label>
 		<label>What flavor does it has?
 			<select name="doc_type" id="doc_type">
-				<option value="xhtml">HTML5</option>
+				<option value="html5">HTML5</option>
 				<option value="html4">HTML4</option>
-				<option value="html5">XHTML</option>
+				<option value="xhtml">XHTML</option>
 			</select>
 		</label>
 		<label>Column count:
@@ -50,14 +50,8 @@ include '_header.php';
 	<button type="reset">Start All Over</button>
 </form>
 
-
-
-
-
-
-
-
-
+<hr />
+<p>Fill in the details, then submit and save the results. Don't forget to save the CSS file.</p>
 
 
 <?php include '_footer.php'; ?>

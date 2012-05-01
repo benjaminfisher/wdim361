@@ -138,7 +138,13 @@ body {
     -webkit-box-shadow:  1px 1px 5px 3px #AAA;
     -moz-box-shadow:  1px 1px 5px 3px #AAA;
     box-shadow:  1px 1px 5px 3px #AAA;
-        
+
+}
+
+form {
+	margin-bottom: 1em;
+	padding-bottom:1em;
+	border-bottom: 1px solid #AAA;
 }
 h1 {
 	font-size:2em;

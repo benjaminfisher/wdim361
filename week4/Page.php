@@ -13,8 +13,14 @@ class Page{
 		'xhtml' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'
 	);
 	
-	function __construct(){
-
+	function __construct($cCount){
+		$this->columns = "";
+		for ($i=0; $i < $cCount; $i++) { 
+			$this->columns .='<div class="column">Column '.($i + 1).' content</div>'."\n";
+		}
+		
+		$width = 60/$cCount;
+		$this->style .= "div.column{ border:1px solid #000; float:left; width:$width%; min-height:500px; }";
 	}
 	
 	public function __get($name){
