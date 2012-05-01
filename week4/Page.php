@@ -20,7 +20,7 @@ class Page{
 		}
 		
 		$width = 60/$cCount;
-		$this->style .= "div.column{ border:1px solid #000; float:left; width:$width%; min-height:500px; }";
+		$this->style .= "div.column{ border:1px solid #000; float:left; width:$width%; min-height:500px; }\n";
 	}
 	
 	public function __get($name){
