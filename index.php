@@ -15,6 +15,7 @@
 	
 	<?php
 		date_default_timezone_set('America/Los_Angeles');
+        
         print '<p>This is more php</p>'; 
         $name = "Sir Issac Newton";
         
