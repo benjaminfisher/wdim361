@@ -16,7 +16,7 @@ class Page{
 	function __construct($cCount){
 		$this->columns = "";
 		for ($i=0; $i < $cCount; $i++) { 
-			$this->columns .='<div class="column">Column '.($i + 1).' content</div>'."\n";
+			$this->columns .='<div class="column">'."\n\r<p>Column ".($i + 1).' content</p>'."\n</div>\n";
 		}
 		
 		$width = 60/$cCount;
