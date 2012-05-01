@@ -2,6 +2,8 @@
 
 include 'Page.php';
 
+var_dump($_POST);
+
 $home = new Page();
 
 $home -> title = 'About';

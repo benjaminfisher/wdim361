@@ -1,0 +1,4 @@
+header nav.global{	overflow:auto;	border: 1px solid black;	margin: 0 1em;	padding: 1em;}
+
+header nav.global li{	float:left;	list-style-type:none;	margin-right:1em;}
+.wrapper{ margin:1em; }
