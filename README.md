@@ -14,5 +14,11 @@ Art Institute of Portland
 * Creating basic **Functions**
 
 ### Week 2 ###
-* '''php ini_set('display_errors', 1); '''
-* '''php if(!empty($variable)){...} '''
+*
+'''php
+ini_set('display_errors', 1);
+'''
+*
+'''php
+if(!empty($variable)){...}
+'''
