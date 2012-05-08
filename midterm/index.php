@@ -14,6 +14,6 @@
 ?>
 
 <p>This is the home page... and stuff.</p>
-<p>Choose a tab to get to the actual work.</p>
+<p>Follow the navigation to get to the actual work.</p>
 
 <?php include '_footer.php'; ?>
