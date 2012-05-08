@@ -26,6 +26,11 @@ Creating and calling functions.
 * `if(!empty($variable)){...}`
 * **Arrays:** `explode($array)`
 * _in_ `_header.php` : `basename($_SERVER['PHP_SELF'])`
-* _in_ `index.php` : sanitize user input: `strip_tags(trim($_POST['name_of_input']))`
+* _in_ `index.php` : sanitize user input: 
+```PHP
+strip_tags(trim($_POST['name_of_input']))
+```
+
 * _in_ `index.php` : Display errors during development `ini_set('display_errors', 1)`
-** Also `error_reporting(E_ALL)`
+* Also `error_reporting(E_ALL)`
+* `switch` statements
