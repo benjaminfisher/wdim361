@@ -1,10 +1,6 @@
 <?php
 $navigation = array(
-    'About Us'      =>  'about.php',
-    'Our Products'  =>  'products.php',
-    'Contact'       =>  'contact.php',
-    'Testimonials'  =>  'test.php',
-    'Blog'          =>  'blog.php'
+    'Add a Product'      =>  'addProduct.php',
 );
 
 // Print out the navigation items and links from $navigation

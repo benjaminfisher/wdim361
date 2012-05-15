@@ -12,11 +12,7 @@
 </head>
 <body>
     <header class="global">
-    	<nav class="global">
-    		<ul>
-    			<li><a href="addProduct.php">Add a Product</a></li>
-    		</ul>
-    	</nav>
+    	<?php include '_nav.php'; ?>
     </header>
     
     <div id="wrapper"><!-- Ends in _footer.php file -->

@@ -58,13 +58,17 @@ body {
 }
 #wrapper {
 	border:1px solid #333;
+	clear:both;
 	margin:0 auto;
+	overflow:hidden;
 	padding:20px;
 	text-align:left;
 	width:700px;
 }
 h1 {
+	clear:both;
 	font-size:20px;
+	line-height:120%;
 }
 h2 {
 	font-size:16px;
@@ -74,6 +78,14 @@ h1, h2 {
 	font-family:"MS Trebuchet", Arial, sans-serif;
 }
 
+nav{
+	border: 1px solid #5E5E5E;
+	margin-bottom:1em;
+	overflow:hidden;
+	padding:1em;
+}
 nav ul li {
+	float:left;
 	list-style-type:none;
+	margin:0 1em;
 }
