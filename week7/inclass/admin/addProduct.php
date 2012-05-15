@@ -5,28 +5,42 @@ include_once 'ckeditor/ckeditor.php';
 $title = "Add a Product";
 include '_header.php';
 
+$form = new Form();
+$product = new Product();
+
 $sql = 'SELECT * FROM categories'; 
 $result = $mysqli->query($sql);
 
-$form = new Form();
+$errors = array();
+if(!empty($_POST)){
+    $posted = $product->addNew($errors);
+    if($posted){
+        $message = "Product was successfully added.";
+    }
+}
 
 ?>
 
 <h1>Add a Product</h1>
 
-<form action="submit" method="post" enctype="multipart/form-data" id="" class="">
+<?php 
+    if(!empty($message)){
+        print '<div class="result">'.$message.'</div>';
+    }
+?>
+
+<form action="" method="post" enctype="multipart/form-data" id="" class="">
     <div class="form-item">
     	<label for="name">Product Name</label>
     	<div class="input">
     	    <input type="text" id="name" name="name" />
-    	    <?php print $form->fieldError('product'); ?>
+    	    <?php print $form->fieldError('name'); ?>
 	    </div>
     </div>
     
     <div class="form-item">
         	<label for="category">Product Category:</label>
         	<select name="category">
-        	    <option value="">--Show All--</option>
         	    <?php
             	    while($row = $result->fetch_array()){
             	        print '<option value="'.$row['id'].'">'.$row['category'].'</option>';
@@ -74,7 +88,13 @@ $form = new Form();
                 );
                 $CKEditor->editor("description");
              ?>
+             <?php print $form->fieldError('description'); ?>
         </div>
+    </div>
+    
+    <div class="form-item">
+    	<button type="submit">Submit Product</button>
+    	<button type="reset">Clear Form</button>
     </div>
     
 </form>
