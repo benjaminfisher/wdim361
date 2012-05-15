@@ -1,5 +1,4 @@
 <?php
-require '_config.php';
 
 mysql_connect(
   $server = getenv('MYSQL_DB_HOST'),
