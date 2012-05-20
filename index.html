@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Wdim361 : WDIM361A Spring 2012 - Server Side Scripting" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Wdim361</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/benjaminfisher/wdim361">View on GitHub</a>
+
+          <h1 id="project_title">Wdim361</h1>
+          <h2 id="project_tagline">WDIM361A Spring 2012 - Server Side Scripting</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/benjaminfisher/wdim361/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/benjaminfisher/wdim361/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>WDIM361 - Spring 2012</h1>
+
+<h2>Art Institute of Portland</h2>
+
+<h3><a href="https://github.com/benjaminfisher/wdim361/tree/master/week1">Week 1</a></h3>
+
+<p>Intro to the PHP server side scripting language.</p>
+
+<h4>Topics</h4>
+
+<ul>
+<li>Set Default Timezone: <code>date_default_timezone_set()</code>
+</li>
+<li>
+<code>print</code> and <code>echo</code>
+</li>
+<li><code>include 'filename'</code></li>
+<li>Basic <strong>Arrays</strong>
+</li>
+<li>
+<strong>Arrays:</strong> <code>foreach()</code>
+</li>
+<li>
+<strong>Arrays:</strong> <code>shuffle()</code>
+</li>
+<li>Creating basic <strong>Functions</strong>
+</li>
+</ul><h3><a href="https://github.com/benjaminfisher/wdim361/tree/master/week2">Week 2</a></h3>
+
+<p>Creating and calling functions.</p>
+
+<h4>Topics</h4>
+
+<ul>
+<li><code>ini_set('display_errors', 1);</code></li>
+<li><code>if(!empty($variable)){...}</code></li>
+<li>
+<strong>Arrays:</strong> <code>explode($array)</code>
+</li>
+<li>
+<em>in</em> <code>_header.php</code> : <code>basename($_SERVER['PHP_SELF'])</code>
+</li>
+<li>
+<p><em>in</em> <code>index.php</code> : sanitize user input: </p>
+
+<div class="highlight">
+<pre><span class="x">strip_tags(trim($_POST['name_of_input']))</span>
+</pre>
+</div>
+</li>
+<li><p><em>in</em> <code>index.php</code> : Display errors during development <code>ini_set('display_errors', 1)</code></p></li>
+<li><p>Also <code>error_reporting(E_ALL)</code></p></li>
+<li><p><code>switch</code> statements</p></li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Wdim361 maintained by <a href="https://github.com/benjaminfisher">benjaminfisher</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
