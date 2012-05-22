@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Recommendations on LinkedIn</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="http://platform.linkedin.com/in.js"> 
+		api_key: r38f9eq49j5b
+		authorize: true
+	</script>  
+	<script type="text/javascript"> 
+		// Once we have an authorization, fetch the user's profile via API
+		function onLinkedInAuth() {
+			IN.API.Raw('/people/~:(recommendations-received)')
+				.method('GET')
+				.result(function(result){
+					var received = result.recommendationsReceived.values;
+					$('<p>')
+						.html('Recommendations: ' + received.length)
+						.appendTo('#recommendations');
+					
+					$.each(received, function(i, data){
+						$('<h3>')
+							.html(data.recommender.firstName + " " + data.recommender.lastName)
+							.appendTo('#recommendations');
+						$('<p>')
+							.html(data.recommendationText)
+							.appendTo('#recommendations');
+					});
+			})
+		};
+	</script>
+</head>
+<body>
+	<script type="in/login" data-onAuth="onLinkedInAuth">
+		Hello, <?js= firstName ?> <?js= lastName ?>.
+	</script>
+	
+	<div id="recommendations"></div>
+</body>
+</html>
