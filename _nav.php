@@ -4,7 +4,8 @@ $navigation = array(
     'Week 2'    =>  'week2/',
     'Week 3'    =>  'week3/',
     'Week 4'    =>  'week4/',
-    'Week 5'    =>  'week5/'
+    'Week 5'    =>  'week5/',
+    'Week 9'    =>  'week9/',
 );
 
 // Print out the navigation items and links from $navigation
